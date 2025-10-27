@@ -7,13 +7,14 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors({
   origin: [
-    'http://localhost:3000', 
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'http://localhost:8080',
-    /^https:\/\/.*\.figma\.com$/,  // Allow Figma Make
-    /^https:\/\/.*\.figma\.dev$/,  // Allow Figma Dev
-  ],
+  'http://localhost:3000', 
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'http://localhost:8080',
+  /^https:\/\/.*\.figma\.com$/,   // Allow Figma Make
+  /^https:\/\/.*\.figma\.dev$/,   // Allow Figma Dev
+  /^https:\/\/.*\.figma\.site$/,  // Allow Figma Preview  ← NEW!
+],
   credentials: true
 }));
 
